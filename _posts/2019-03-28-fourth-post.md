@@ -82,14 +82,13 @@ published: false
     3. 자바 String 문자열을 C에서 사용하는 문자열 형태로 변환.
     
 #### 5. C 공유 라이브러리 생성
-- 
-
-
-
-
-
+- Visual Studio 명령프롬프트 실행하여 컴파일 명령 입력.
+![20190328_005551](https://user-images.githubusercontent.com/48465809/55142283-99877a80-517f-11e9-8835-e0462a4b9092.jpg)
 
 #### 6. 자바프로그램 실행
+
+#### 7. 정리
+![20190328_005825](https://user-images.githubusercontent.com/48465809/55142284-99877a80-517f-11e9-9eb8-792d71298986.jpg)
 
 
         

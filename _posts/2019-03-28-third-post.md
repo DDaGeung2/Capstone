@@ -45,7 +45,8 @@ published: true
 	- init 프로세스의 콜드 플러그 처리 절차. init 프로세스는 device_init() 함수를 호출.
     
     - ![20190328_150401](https://user-images.githubusercontent.com/48465809/55142286-9a201100-517f-11e9-8b6f-4857c101dfe6.jpg)
-      ![20190328_151029](https://user-images.githubusercontent.com/48465809/55142288-9a201100-517f-11e9-9160-894d78647f6b.jpg)
+        
+	- ![20190328_151029](https://user-images.githubusercontent.com/48465809/55142288-9a201100-517f-11e9-9160-894d78647f6b.jpg)
         
     - ![20190328_175046](https://user-images.githubusercontent.com/48465809/55143465-26cbce80-5182-11e9-9f77-47e8868b8255.jpg)
         

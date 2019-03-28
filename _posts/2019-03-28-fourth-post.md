@@ -1,7 +1,4 @@
 ---
-published: false
----
----
 title: "스터디 2주차 / 4단원 ~ 4.2"
 date: 2019-03-28 17:00:00 -0400
 categories: study capstonedesign

@@ -71,19 +71,24 @@ published: false
     
     ![20190328_004548](https://user-images.githubusercontent.com/48465809/55142279-98eee400-517f-11e9-9637-72ed1e94daf3.jpg)
         
-#### 4. C/C++ 코드 구현
+#### 4. C/C++ 코드 구현: hellojni.c 파일 작성
+- 생성된 헤더파일에서 정의된 함수 원형을 hellojni.c 파일에 복사하여 매개변수의 이름을 지정하여야 함. 헤더파일에서 함수 선언은 매개변수의 타입만 지정되어 있을뿐 실제로 사용될 매개변수의 이름 지정되어있지 X.
 
+- ![20190328_004611](https://user-images.githubusercontent.com/48465809/55142280-98eee400-517f-11e9-8060-8d74445623d2.jpg)
+![20190328_004646](https://user-images.githubusercontent.com/48465809/55142282-98eee400-517f-11e9-8032-5fe4e9fcadfc.jpg)
 
-
-
-
-
-
-
-
-
-
+	1. HelloJNI 클래스의 printHello() 함수와 매핑. 단순히 콘솔에 "Hello World!" 출력,
+    2. printString() 네이티브 메서드로부터 문자열 인자를 넘겨받아 콘솔에 출력. 
+    3. 자바 String 문자열을 C에서 사용하는 문자열 형태로 변환.
+    
 #### 5. C 공유 라이브러리 생성
+- 
+
+
+
+
+
+
 #### 6. 자바프로그램 실행
 
 

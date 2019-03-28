@@ -1,7 +1,8 @@
 ---
-title: "스터디 2주차 / 3.3.4 ~ 3단원 끝"
-date: 2019-03-28 17:00:00 -0400
+title: 스터디 2주차 / 3.3.4 ~ 3단원 끝
+date: '2019-03-28 17:00:00 -0400'
 categories: study capstonedesign
+published: true
 ---
 
 
@@ -43,15 +44,15 @@ categories: study capstonedesign
 			- devperms 구조체: 디바이스 노드 파일 이름. 접근 권한, 사용자 ID, 그룹 ID.
 	- init 프로세스의 콜드 플러그 처리 절차. init 프로세스는 device_init() 함수를 호출.
     
-    	![20190328_150401](https://user-images.githubusercontent.com/48465809/55142286-9a201100-517f-11e9-8b6f-4857c101dfe6.jpg)
+    - ![20190328_150401](https://user-images.githubusercontent.com/48465809/55142286-9a201100-517f-11e9-8b6f-4857c101dfe6.jpg)
         
-		![20190328_151029](https://user-images.githubusercontent.com/48465809/55142288-9a201100-517f-11e9-9160-894d78647f6b.jpg)
+	- ![20190328_151029](https://user-images.githubusercontent.com/48465809/55142288-9a201100-517f-11e9-9160-894d78647f6b.jpg)
         
-        ![20190328_175046](https://user-images.githubusercontent.com/48465809/55143465-26cbce80-5182-11e9-9f77-47e8868b8255.jpg)
+    - ![20190328_175046](https://user-images.githubusercontent.com/48465809/55143465-26cbce80-5182-11e9-9f77-47e8868b8255.jpg)
         
-		![20190328_151930](https://user-images.githubusercontent.com/48465809/55142289-9ab8a780-517f-11e9-8c19-05ac709d36b9.jpg)
+	- ![20190328_151930](https://user-images.githubusercontent.com/48465809/55142289-9ab8a780-517f-11e9-8c19-05ac709d36b9.jpg)
         
-		![20190328_152304](https://user-images.githubusercontent.com/48465809/55142290-9ab8a780-517f-11e9-82e2-11c4c23ac24c.jpg)
+	- ![20190328_152304](https://user-images.githubusercontent.com/48465809/55142290-9ab8a780-517f-11e9-82e2-11c4c23ac24c.jpg)
 
 
 ---------------------
@@ -140,10 +141,3 @@ categories: study capstonedesign
 	3. 그 외의 메시지는 check_perms() 함수를 호출하여 검사. 
 	- 각 프로퍼티의 접근 권한은 리눅스의 uid를 사용하여 구분. 
 - init.rc 파일에는 프로퍼티가 변경됐을 때 필요한 동작이 기술되어 있음. 이러한 동작이 실행되는 조건은 "on property:<key>=<value>" 형식으로 기술. 조건에 해당하는 키의 값이 설정되면 조건에 따른 명령(trigger) 실행.
-
-
-
-
-
-
-

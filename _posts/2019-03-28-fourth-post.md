@@ -1,7 +1,8 @@
 ---
-title: "스터디 2주차 / 4단원 ~ 4.2"
-date: 2019-03-28 17:00:00 -0400
+title: 스터디 2주차 / 4단원 ~ 4.2
+date: '2019-03-28 17:00:00 -0400'
 categories: study capstonedesign
+published: true
 ---
 
 
@@ -91,6 +92,3 @@ categories: study capstonedesign
 
 #### 7. 정리
 ![20190328_005825](https://user-images.githubusercontent.com/48465809/55142284-99877a80-517f-11e9-9eb8-792d71298986.jpg)
-
-
-        

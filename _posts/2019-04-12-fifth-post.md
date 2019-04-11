@@ -1,5 +1,5 @@
 ---
-title: 스터디 2주차 / 4단원 ~ 4.2
+title: 스터디 3주차 / 4.3 ~ 4.4
 date: '2019-03-28 17:00:00 -0400'
 categories: study capstonedesign
 published: true
@@ -32,7 +32,7 @@ JNI 함수를 활용한 예제 프로그램의 전체 동작 순서 (그림 4-16
 
 #### JniFuncMain.java 소스 코드의 `JniFuncMain 클래스`
 
-```
+```j
 public class Java_JniFuncMain_createJniObject
 {
   private static int staticIntField = 300;
@@ -60,7 +60,7 @@ public class Java_JniFuncMain_createJniObject
 
 JNI 네이티브 함수인 `Java_JniFuncMain_createJniObject()`는 JNI 함수를 이용해 JniTest 객체를 생성하고, `callByNative()` 메서드를 호출할 것이다.
 
-```
+```j
 class JniTest
 {
   private int intField;
@@ -92,7 +92,7 @@ JniFuncMain.java 에 선언한 createJniObject() 네이티브 메서드에 대�
 
 헤더 파일을 살펴보면 createJniObject() 메서드에 대해 다음과 같은 JNI 네이티브 함수의 원형이 생성되었음을 확인할 수 있다. 이 함수는 JniFuncMain 클래스의 `createJniObject()` 네이티브 메서드와 매핑되는 함수이다.
 
-```
+```c
 /*
  * Class:   JniFuncMain
  * Method:  createJniObject()
@@ -109,7 +109,7 @@ JniFuncMain.java 소스 코드의 JniFuncMain 클래스에서 `public static nat
 
 아래는 Java_JniFuncMain_createJniObject() JNI 네이티브 함수를 보여주는 jnifunc.cpp 코드이다.
 
-```
+```c++
 JNIEXPORT jobject JNICALL Java_JniFuncMain_createJniObject(JNIEnv *env, jclass clazz)
 {
   jclass targetClass;
@@ -152,7 +152,7 @@ JNIEXPORT jobject JNICALL Java_JniFuncMain_createJniObject(JNIEnv *env, jclass c
 
 #### JNI를 통한 멤버 필드 값 얻어오기
 
-```
+```c++
 // 1) 접근하려는 멤버 변수가 선언된 자바 클래스의 jclass 값을 구한다.
 
 // 2) GetStaticFieldID() JNI 함수로 이 클래스의 멤버 변수에 대한 jfieldID 값을 구한다.
@@ -177,7 +177,7 @@ staticIntField 멤버 필드는 JniFuncMain 클래스에 정적으로 선언되�
 
 #### 객체 생성하기
 
-```
+```c++
 // 1) 객체 생성에 필요한 클래스 찾기
 targetClass = env->FindClass("JniTest");
 // Tip) targetClass에 저장된 FindClass()의 반환값은 JniTest의 지역 레퍼런스 값.

@@ -32,7 +32,7 @@ JNI 함수를 활용한 예제 프로그램의 전체 동작 순서 (그림 4-16
 
 #### JniFuncMain.java 소스 코드의 `JniFuncMain 클래스`
 
-```j
+```c
 public class Java_JniFuncMain_createJniObject
 {
   private static int staticIntField = 300;
@@ -60,7 +60,7 @@ public class Java_JniFuncMain_createJniObject
 
 JNI 네이티브 함수인 `Java_JniFuncMain_createJniObject()`는 JNI 함수를 이용해 JniTest 객체를 생성하고, `callByNative()` 메서드를 호출할 것이다.
 
-```j
+```c
 class JniTest
 {
   private int intField;

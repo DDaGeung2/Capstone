@@ -22,7 +22,8 @@ C코드인 JNI 네이티브 함수에서 자바 측 코드를 제어하는 방�
 
 크게 네이티브 메서드가 선언된 JniFuncMain 클래스, JniTest 객체, 네이티브 메서드의 실제 구현이 포함된 jnifunc.dll로 구성.
 
-JNI 함수를 활용한 예제 프로그램의 전체 동작 순서 (그림 4-16 첨부)
+**JNI 함수를 활용한 예제 프로그램의 전체 동작 순서**
+![Scanner_IMG_2019-04-09 07-55-25](https://user-images.githubusercontent.com/48465809/56012278-bb0f6700-5d26-11e9-98b6-0638839a5e0a.jpg)
 
 자바측의 JniFuncMain 클래스에서 네이티브 메서드 `createJniObject()` 를 호출하는 것부터 시작. 이 메서드는 jnitest.dll의 Java_JniFuncMain_createJniObject()라는 C함수와 연결되어 있다.
 
@@ -109,7 +110,7 @@ JniFuncMain.java 소스 코드의 JniFuncMain 클래스에서 `public static nat
 
 아래는 Java_JniFuncMain_createJniObject() JNI 네이티브 함수를 보여주는 jnifunc.cpp 코드이다.
 
-```c++
+```c
 JNIEXPORT jobject JNICALL Java_JniFuncMain_createJniObject(JNIEnv *env, jclass clazz)
 {
   jclass targetClass;
@@ -152,7 +153,7 @@ JNIEXPORT jobject JNICALL Java_JniFuncMain_createJniObject(JNIEnv *env, jclass c
 
 #### JNI를 통한 멤버 필드 값 얻어오기
 
-```c++
+```c
 // 1) 접근하려는 멤버 변수가 선언된 자바 클래스의 jclass 값을 구한다.
 
 // 2) GetStaticFieldID() JNI 함수로 이 클래스의 멤버 변수에 대한 jfieldID 값을 구한다.
@@ -177,7 +178,7 @@ staticIntField 멤버 필드는 JniFuncMain 클래스에 정적으로 선언되�
 
 #### 객체 생성하기
 
-```c++
+```c
 // 1) 객체 생성에 필요한 클래스 찾기
 targetClass = env->FindClass("JniTest");
 // Tip) targetClass에 저장된 FindClass()의 반환값은 JniTest의 지역 레퍼런스 값.
@@ -204,7 +205,7 @@ JNI 네이티브 함수에서 자바 메서드를 이용하려면 이용하고�
 
 #### 자바 메서드 호출하기
 
-```c++
+```c
 // 1) 호출할 메서드가 포함된 자바 클래스의 jclass 값을 구함.
 targetClass = env->GetObjectClass(newObject);
 // 전체 코드에서 FindClass() JNI 함수를 이용해 targetClass에 저장했기 때문에 이 값을 그대로
@@ -227,7 +228,7 @@ result = env->CallIntMethod(newObject, mid, 200);
 
 멤버 필드 값을 읽어 오는 과정과 유사하다. Set<type>Field() 함수를 통해 멤버 필드의 값을 설정.
 
-```c++
+```c
 // 1) intField 멤버 변수를 포함한 JniTest 클래스의 jclass 값을 구함.
 // 이미 targetClass에 저장되어 있음.
 
@@ -259,11 +260,11 @@ C/C++ 프로그램에서 기존에 작성한 자바 기반의 라이브러리를
 
 ### 호출 API 사용 예제: InvokeJava.cpp, InvocationApiTest.java
 
-(그림 4-24 링크 첨부)
+![Scanner_IMG_2019-04-10 04-31-15](https://user-images.githubusercontent.com/48465809/56012279-bba7fd80-5d26-11e9-9ed8-27d7e6aaa237.jpg)
 
 #### 자바 코드(InvocationApiTest.java) 살펴보기
 
-```j
+```c
 public class InvocationApiTest
 {
   // 정적 메서드로 문자열 객체 배열을 인자로 받아 그 중 첫번째 문자열을 가리키는 'args[0]'를

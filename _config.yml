@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "따긍이의 Github"
+title                    : "Android Framework"
 title_separator          : "-"
 name                     : "Your Name"
 description              : "An amazing website."
@@ -288,6 +288,7 @@ defaults:
       type: posts
     values:
       layout: single
+      classes: wide
       author_profile: true
       read_time: true
       comments: # true
